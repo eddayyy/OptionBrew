@@ -1,0 +1,66 @@
+# Dependency directories
+node_modules/
+bower_components/
+
+# Production
+build/
+dist/
+
+# Misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# Local environment files
+.env*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment variables
+.env
+venv/
+
+# Python cache
+__pycache__/
+
+# Project specific
+db.sqlite3
+src/assets/
+migrations/
+public/
+util/ 
+components/ 
+Account/
+Dashboard/
+Market/
+Watchlist/
+migrations/
+MarketViews.py
