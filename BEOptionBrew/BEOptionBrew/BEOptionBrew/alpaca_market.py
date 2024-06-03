@@ -18,27 +18,7 @@ class MarketAPI:
       load_dotenv()
       self.connect_to_stream()
 
-  def on_open(self, ws):
-      print("Opened connection")
-      ws.send(json.dumps(auth_data))
-
-  def on_message(self, ws, message):
-    message = json.loads(message)
-    if 'T' in message and message['T'] == 'trade':
-        with self.lock:
-            ticker = message['S']
-            if ticker not in self.data:
-                self.data[ticker] = []
-            self.data[ticker].append({
-                "timestamp": message['t'],
-                "price": message['p']
-            })
-
-  def on_error(self, ws, error):
-      print("Error:", error)
-
   def on_close(self, ws, close_status_code, close_msg):
-      print("Closed connection:", close_status_code, close_msg)
       with self.lock:
           self.connection = None  # Reset connection on close
 
@@ -62,7 +42,6 @@ class MarketAPI:
     else:
         print("Connection is closed. Reconnecting...")
         self.connect_to_stream()
-        # Wait to ensure the connection is established
         threading.Event().wait(1.0)
         # Recheck connection before attempting to send again
         if self.connection and self.connection.sock and self.connection.sock.connected:
