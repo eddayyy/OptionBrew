@@ -20,7 +20,9 @@
 
 ## 🌟 Overview
 
-**Option Brew** is an advanced and dynamic web application built with modern technologies to offer a seamless trading experience. The platform provides real-time market data and trading capabilities, leveraging the powerful Alpaca APIs. This repository serves as a proof of concept, demonstrating the core functionalities and overall architecture. Please note that the complete source code is hosted in a separate repository, and some important code is intentionally omitted here.
+**Option Brew** is an advanced and dynamic web application built with modern technologies to offer a seamless trading experience. The platform provides real-time market data and trading capabilities, leveraging the powerful Alpaca APIs.
+
+This repository serves as a proof of concept, demonstrating the core functionalities and overall architecture. Please note that the complete source code is hosted in a separate repository, and some important code is intentionally omitted here.
 
 ## 📄 License
 
