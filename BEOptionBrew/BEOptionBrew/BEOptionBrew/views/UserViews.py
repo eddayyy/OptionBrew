@@ -98,7 +98,3 @@ class UserTransactions(APIView):
 
         return Response({"Success": "Funds added successfully using Alpaca account ID."}, 
                         status=status.HTTP_200_OK)
-
-          
-    # def _alpaca_fund_request(self, alpaca_id): 
-        
